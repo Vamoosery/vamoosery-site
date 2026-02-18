@@ -4,25 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vamoosery</title>
-  <style>
-    /* Reset & general styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+<style>
+    /* Custom font */
+    @font-face {
+      font-family: 'CustomFont';
+      src: url('diamondsregular.ttf') format('tff'),
+           url('diamondsregular.ttf') format('tff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* Body styling with texture */
     body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: #fafafa;
-      color: #111;
+      font-family: 'CustomFont', Arial, sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       text-align: center;
+      min-height: 100vh;
       padding: 40px 20px;
+
+      /* Texture background */
+      background-image: url('background.png');
+      background-repeat: repeat; /* tiles texture */
+      background-size: auto; /* keeps original size */
+      background-position: center center;
+      background-attachment: fixed;
     }
 
-    /* Logo */
+    /* Max-size logo */
     img.logo {
-      max-width: 250px;
+      max-width: 80%; /* max width of viewport */
+      height: auto;
       margin-bottom: 30px;
     }
 
