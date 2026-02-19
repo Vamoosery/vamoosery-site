@@ -13,10 +13,10 @@
       font-style: normal;
     }
 
-    /* Body styling with texture and white text */
+    /* Body styling with texture and default text */
     body {
       font-family: 'diamondsregular', Arial, sans-serif;
-      color: #c59a73; /* all text white */
+      color: #c59a73; /* main page text before subtitle */
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -25,22 +25,12 @@
       min-height: 100vh;
       padding: 40px 20px;
 
-      /* Small subtitle beneath main tagline */
-.subtitle {
-  font-size: 1em;       /* smaller than tagline */
-  margin-top: -5px;     /* adjust spacing if needed */
-  margin-bottom: 30px;  /* space before main links */
-  color: #c59a73;          /* matches text color */
-  font-weight: normal;
-}
-
-
-  /* Fullscreen background */
-  background-image: url('Album Front Cover (1).jpg');
-  background-repeat: no-repeat;       /* no tiling */
-  background-size: cover;             /* fills viewport */
-  background-position: center center; /* centers image */
-  background-attachment: fixed;       /* stays in place on scroll */
+      /* Fullscreen background */
+      background-image: url('Album Front Cover (1).jpg');
+      background-repeat: no-repeat;       /* no tiling */
+      background-size: cover;             /* fills viewport */
+      background-position: center center; /* centers image */
+      background-attachment: fixed;       /* stays in place on scroll */
     }
 
     /* Max-size logo */
@@ -52,9 +42,16 @@
 
     /* Title & tagline */
     h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+    .subtitle {
+      font-size: 1em;       
+      margin-top: -5px;     
+      margin-bottom: 30px;  /* space before social links */
+      color: #fff;          /* subtitle white */
+      font-weight: normal;
+    }
     p { font-size: 1.2em; margin-bottom: 2em; }
 
-    /* Buttons / links */
+    /* Main Links */
     .links a {
       display: inline-block;
       margin: 0.5em;
@@ -65,21 +62,37 @@
       border-radius: 6px;
       font-weight: bold;
       transition: all 0.2s;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6); /* subtle shadow */
     }
     .links a:hover {
       background: rgba(0,0,0,0.9);
     }
 
-     /* Associated Projects Section */
+    /* Make all content after subtitle white with subtle shadow */
+    .links,
+    .links a,
+    .projects,
+    .projects .project-title,
+    .projects .project-links a,
+    .projects h2 {
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+
+    /* Associated Projects Section */
     .projects {
-      margin-top: 50px;
+      margin-top: 80px;  /* larger gap from social buttons */
       text-align: center;
+    }
+    .projects h2 {
+      font-size: 1.8em; /* smaller than main h1 */
+      margin-bottom: 20px;
     }
     .project {
       margin-bottom: 20px;
     }
     .project-title {
-      font-size: 1.5em;
+      font-size: 1.4em;
       margin-bottom: 5px;
     }
     .project-links a {
@@ -98,7 +111,7 @@
     }
 
     /* Footer */
-    footer { margin-top: 40px; font-size: 0.9em; color: #ccc; }
+    footer { margin-top: 40px; font-size: 0.9em; color: #ccc; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); }
   </style>
 </head>
 <body>
@@ -107,8 +120,8 @@
   <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
 
   <!-- Title & tagline -->
-  <h1>FEMALE-FRONTED PROG ROCK FROM COVENTRY, UK</h1>
-  <p class="subtitle">We keep moving forward.</p>
+  <h1>MOVING FORWARD</h1>
+  <p class="subtitle">FEMALE-FRONTED PROG ROCK FROM COVENTRY, UK</p>
   <p>Music • Merch • Updates</p>
 
   <!-- Main Links -->
@@ -121,8 +134,8 @@
     <a href="mailto:vamoosery@gmail.com">Contact</a>
   </div>
 
-    <!-- Associated Projects -->
-   <h1>ASSOCIATED PROJECTS</h1>
+  <!-- Associated Projects -->
+  <h2>ASSOCIATED PROJECTS</h2>
   <div class="projects">
     <div class="project">
       <div class="project-title">Joel Julian</div>
