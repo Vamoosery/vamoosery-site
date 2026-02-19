@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vamoosery</title>
+
   <style>
     /* Custom font */
     @font-face {
@@ -13,10 +14,9 @@
       font-style: normal;
     }
 
-    /* Body styling with texture and default text */
     body {
       font-family: 'diamondsregular', Arial, sans-serif;
-      color: #c59a73; /* main page text before subtitle */
+      color: #fff;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -25,33 +25,44 @@
       min-height: 100vh;
       padding: 40px 20px;
 
-      /* Fullscreen background */
       background-image: url('Album Front Cover (1).jpg');
-      background-repeat: no-repeat;       /* no tiling */
-      background-size: cover;             /* fills viewport */
-      background-position: center center; /* centers image */
-      background-attachment: fixed;       /* stays in place on scroll */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
     }
 
-    /* Max-size logo */
+    /* Logo */
     img.logo {
       max-width: 50%;
       height: auto;
       margin-bottom: 30px;
     }
 
-    /* Title & tagline */
-    h1 { font-size: 2.5em; margin-bottom: 0.5em; }
-    .subtitle {
-      font-size: 1em;       
-      margin-top: -5px;     
-      margin-bottom: 30px;  /* space before social links */
-      color: #fff;          /* subtitle white */
-      font-weight: normal;
+    /* Main Heading */
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
-    p { font-size: 1.2em; margin-bottom: 2em; }
 
-    /* Main Links */
+    /* Subtitle */
+    .subtitle {
+      font-size: 1em;
+      margin-top: -5px;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
+    /* Music • Merch • Updates */
+    .tagline {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      color: #c59a73;
+      text-shadow: 0 0 4px rgba(255,255,255,0.6);
+    }
+
+    /* Social Buttons */
     .links a {
       display: inline-block;
       margin: 0.5em;
@@ -62,39 +73,38 @@
       border-radius: 6px;
       font-weight: bold;
       transition: all 0.2s;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.6); /* subtle shadow */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
+
     .links a:hover {
       background: rgba(0,0,0,0.9);
     }
 
-    /* Make all content after subtitle white with subtle shadow */
-    .links,
-    .links a,
-    .projects,
-    .projects .project-title,
-    .projects .project-links a,
-    .projects h2 {
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    /* Associated Projects Heading */
+    .projects-heading {
+      margin-top: 100px; /* larger gap ABOVE */
+      margin-bottom: 20px;
+      font-size: 2em; /* slightly larger */
+      color: #c59a73;
+      text-shadow: 0 0 4px rgba(255,255,255,0.6);
     }
 
-    /* Associated Projects Section */
+    /* Projects Section */
     .projects {
-      margin-top: 80px;  /* larger gap from social buttons */
       text-align: center;
     }
-    .projects h2 {
-      font-size: 1.8em; /* smaller than main h1 */
-      margin-bottom: 20px;
-    }
+
     .project {
       margin-bottom: 20px;
     }
+
     .project-title {
       font-size: 1.4em;
       margin-bottom: 5px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
+
     .project-links a {
       display: inline-block;
       margin: 0.3em;
@@ -105,26 +115,35 @@
       border-radius: 5px;
       font-size: 0.9em;
       transition: all 0.2s;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
     }
+
     .project-links a:hover {
       background: #555;
     }
 
     /* Footer */
-    footer { margin-top: 40px; font-size: 0.9em; color: #ccc; text-shadow: 1px 1px 2px rgba(0,0,0,0.6); }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+
   </style>
 </head>
+
 <body>
 
   <!-- Logo -->
   <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
 
-  <!-- Title & tagline -->
+  <!-- Title & Taglines -->
   <h1>MOVING FORWARD</h1>
   <p class="subtitle">FEMALE-FRONTED PROG ROCK FROM COVENTRY, UK</p>
-  <p>Music • Merch • Updates</p>
+  <p class="tagline">Music • Merch • Updates</p>
 
-  <!-- Main Links -->
+  <!-- Social Links -->
   <div class="links">
     <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">Spotify</a>
     <a href="https://vamoosery.bandcamp.com/" target="_blank">BANDCAMP</a>
@@ -135,20 +154,22 @@
   </div>
 
   <!-- Associated Projects -->
-  <h2>ASSOCIATED PROJECTS</h2>
+  <h2 class="projects-heading">ASSOCIATED PROJECTS</h2>
+
   <div class="projects">
     <div class="project">
-      <div class="project-title">Joel Julian</div>
+      <div class="project-title">JOEL JULIAN</div>
       <div class="project-links">
-        <a href="https://open.spotify.com/artist/0vKVyu27eSxti4FSmlZ9Da?si=vIHFjZTCTzCh9nag1xn4JA" target="_blank">Spotify</a>
+        <a href="https://open.spotify.com/artist/0vKVyu27eSxti4FSmlZ9Da?si=vIHFjZTCTzCh9nag1xn4JA" target="_blank">SPOTIFY</a>
         <a href="https://joeljulian.bandcamp.com/" target="_blank">Bandcamp</a>
       </div>
     </div>
+
     <div class="project">
       <div class="project-title">K.A.B</div>
       <div class="project-links">
-        <a href="https://open.spotify.com/artist/0T0hjDEz0MjZEPpJCFJyGN?si=oboZ5-9uT_-lnwg0tzfp9Q" target="_blank">Spotify</a>
-        <a href="https://kabmusic1.bandcamp.com/" target="_blank">Bandcamp</a>
+        <a href="https://open.spotify.com/artist/0T0hjDEz0MjZEPpJCFJyGN?si=oboZ5-9uT_-lnwg0tzfp9Q" target="_blank">SPOTIFY</a>
+        <a href="https://kabmusic1.bandcamp.com/" target="_blank">BANDCAMP</a>
       </div>
     </div>
   </div>
