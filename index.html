@@ -6,106 +6,111 @@
   <title>Vamoosery</title>
 
   <style>
-    /* Custom font */
     @font-face {
       font-family: 'diamondsregular';
       src: url('diamondsregular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
     }
 
     body {
       font-family: 'diamondsregular', Arial, sans-serif;
       color: #fff;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       min-height: 100vh;
-      margin: 0;
       padding: 40px 20px;
+
       background-image: url('Album Front Cover (1).jpg');
+      background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: center center;
       background-attachment: fixed;
     }
 
-    /* Subtle translucent panel */
+    /* Ultra-subtle translucent panel */
     .content-wrapper {
-      background: rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.25); /* MUCH lighter */
+      backdrop-filter: blur(4px); /* softer blur */
+      -webkit-backdrop-filter: blur(4px);
       padding: 50px 40px;
-      border-radius: 18px;
-      text-align: center;
-      max-width: 900px;
-      width: 100%;
+      border-radius: 12px;
       animation: fadeIn 1.2s ease forwards;
+      opacity: 0;
     }
 
-    /* Fade-in animation */
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; }
     }
 
-    /* Logo */
     img.logo {
       max-width: 50%;
+      height: auto;
       margin-bottom: 30px;
     }
 
-    /* Main Heading */
     h1 {
       font-size: 2.5em;
       margin-bottom: 0.5em;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* clean, not hazy */
     }
 
-    /* Subtitle */
     .subtitle {
       font-size: 1em;
       margin-top: -5px;
       margin-bottom: 30px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
-    /* Shared gold heading style */
-    .gold-heading {
-      font-size: 1.6em; /* same size for both */
-      color: #c59a73;
-      text-shadow: 0 0 6px rgba(255,255,255,0.6);
+    .tagline {
+      font-size: 1.5em; /* matched size */
       margin-bottom: 2em;
+      color: #c59a73;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
-    /* Social Buttons */
     .links a {
       display: inline-block;
       margin: 0.5em;
       padding: 0.8em 1.5em;
       text-decoration: none;
       color: #fff;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.55);
       border-radius: 6px;
       font-weight: bold;
-      transition: all 0.3s ease;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      transition: all 0.25s ease;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
     .links a:hover {
-      background: rgba(0,0,0,0.85);
-      box-shadow: 0 0 12px rgba(255,255,255,0.5);
+      background: rgba(0,0,0,0.75);
+      box-shadow: 0 0 8px rgba(197,154,115,0.6);
       transform: translateY(-2px);
     }
 
-    /* Associated Projects Heading */
     .projects-heading {
-      margin-top: 120px; /* larger space ABOVE */
-      margin-bottom: 25px;
+      margin-top: 100px;
+      margin-bottom: 20px;
+      font-size: 1.5em; /* matched to tagline */
+      color: #c59a73;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
-    /* Project Titles */
+    .projects {
+      text-align: center;
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
     .project-title {
       font-size: 1.4em;
       margin-bottom: 5px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
     .project-links a {
@@ -114,23 +119,23 @@
       padding: 0.5em 1em;
       text-decoration: none;
       color: #fff;
-      background: #333;
+      background: rgba(0,0,0,0.6);
       border-radius: 5px;
       font-size: 0.9em;
-      transition: all 0.3s ease;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      transition: all 0.25s ease;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
     .project-links a:hover {
-      background: #555;
-      box-shadow: 0 0 10px rgba(255,255,255,0.5);
+      background: rgba(0,0,0,0.8);
+      box-shadow: 0 0 6px rgba(197,154,115,0.5);
       transform: translateY(-2px);
     }
 
     footer {
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 0.9em;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
   </style>
@@ -144,26 +149,25 @@
 
     <h1>MOVING FORWARD</h1>
     <p class="subtitle">FEMALE-FRONTED PROG ROCK FROM COVENTRY, UK</p>
-
-    <p class="gold-heading">Music • Merch • Updates</p>
+    <p class="tagline">Music • Merch • Updates</p>
 
     <div class="links">
-      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">SPOTIFY</a>
+      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">Spotify</a>
       <a href="https://vamoosery.bandcamp.com/" target="_blank">BANDCAMP</a>
       <a href="https://www.facebook.com/Vamoosery" target="_blank">FACEBOOK</a>
       <a href="https://www.instagram.com/vamoosery/" target="_blank">INSTAGRAM</a>
       <a href="https://www.youtube.com/@vamoosery/" target="_blank">YOUTUBE</a>
-      <a href="mailto:vamoosery@gmail.com">CONTACT</a>
+      <a href="mailto:vamoosery@gmail.com">Contact</a>
     </div>
 
-    <h2 class="gold-heading projects-heading">ASSOCIATED PROJECTS</h2>
+    <h2 class="projects-heading">ASSOCIATED PROJECTS</h2>
 
     <div class="projects">
       <div class="project">
         <div class="project-title">JOEL JULIAN</div>
         <div class="project-links">
           <a href="https://open.spotify.com/artist/0vKVyu27eSxti4FSmlZ9Da?si=vIHFjZTCTzCh9nag1xn4JA" target="_blank">SPOTIFY</a>
-          <a href="https://joeljulian.bandcamp.com/" target="_blank">BANDCAMP</a>
+          <a href="https://joeljulian.bandcamp.com/" target="_blank">Bandcamp</a>
         </div>
       </div>
 
