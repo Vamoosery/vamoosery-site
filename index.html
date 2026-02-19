@@ -24,17 +24,17 @@
       min-height: 100vh;
       padding: 40px 20px;
 
-      background-image: url('Album Front Cover (1).jpg');
+      background-image: url('Album Front Cover (1).webp');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      background-attachment: fixed;
+      /* removed background-attachment: fixed; (improves mobile performance) */
     }
 
-    /* Ultra-subtle translucent panel */
+    /* Subtle translucent panel */
     .content-wrapper {
-      background: rgba(0, 0, 0, 0.25); /* MUCH lighter */
-      backdrop-filter: blur(4px); /* softer blur */
+      background: rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
       padding: 50px 40px;
       border-radius: 12px;
@@ -52,10 +52,17 @@
       margin-bottom: 30px;
     }
 
+    /* Make logo larger on mobile */
+    @media (max-width: 768px) {
+      img.logo {
+        max-width: 80%;
+      }
+    }
+
     h1 {
       font-size: 2.5em;
       margin-bottom: 0.5em;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* clean, not hazy */
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
     .subtitle {
@@ -65,11 +72,12 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
+    /* Slightly brighter accent */
     .tagline {
-      font-size: 1.5em; /* matched size */
+      font-size: 1.5em;
       margin-bottom: 2em;
-      color: #c59a73;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      color: #d6b089; /* brighter than #c59a73 */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
 
     .links a {
@@ -87,16 +95,16 @@
 
     .links a:hover {
       background: rgba(0,0,0,0.75);
-      box-shadow: 0 0 8px rgba(197,154,115,0.6);
+      box-shadow: 0 0 8px rgba(214,176,137,0.6);
       transform: translateY(-2px);
     }
 
     .projects-heading {
       margin-top: 100px;
       margin-bottom: 20px;
-      font-size: 1.5em; /* matched to tagline */
-      color: #c59a73;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      font-size: 1.5em;
+      color: #d6b089;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
 
     .projects {
@@ -128,7 +136,7 @@
 
     .project-links a:hover {
       background: rgba(0,0,0,0.8);
-      box-shadow: 0 0 6px rgba(197,154,115,0.5);
+      box-shadow: 0 0 6px rgba(214,176,137,0.5);
       transform: translateY(-2px);
     }
 
