@@ -23,15 +23,12 @@
       text-align: center;
       min-height: 100vh;
       padding: 40px 20px;
-
       background-image: url('Album Front Cover (1).webp');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      /* removed background-attachment: fixed; (improves mobile performance) */
     }
 
-    /* Subtle translucent panel */
     .content-wrapper {
       background: rgba(0, 0, 0, 0.22);
       backdrop-filter: blur(4px);
@@ -40,6 +37,8 @@
       border-radius: 12px;
       animation: fadeIn 1.2s ease forwards;
       opacity: 0;
+      max-width: 900px;
+      width: 100%;
     }
 
     @keyframes fadeIn {
@@ -49,13 +48,24 @@
     img.logo {
       max-width: 50%;
       height: auto;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
-    /* Make logo larger on mobile */
+    /* Album art image */
+    img.album-art {
+      width: 140px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    }
+
     @media (max-width: 768px) {
       img.logo {
         max-width: 100%;
+      }
+      h1 {
+        font-size: 2em;
       }
     }
 
@@ -66,18 +76,28 @@
     }
 
     .subtitle {
-      font-size: 1em;
-      margin-top: -5px;
-      margin-bottom: 30px;
+      font-size: 0.95em;
+      margin-bottom: 20px;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
-    /* Slightly brighter accent */
     .tagline {
       font-size: 1.5em;
-      margin-bottom: 2em;
-      color: #d6b089; /* brighter than #c59a73 */
+      margin-bottom: 1.5em;
+      color: #d6b089;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+
+    /* Inline links inside taglines */
+    .tagline a {
+      color: #d6b089;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .tagline a:hover {
+      text-decoration: underline;
+      color: #f0c9a5;
     }
 
     .links a {
@@ -99,16 +119,18 @@
       transform: translateY(-2px);
     }
 
+    .email-text {
+      margin-top: 10px;
+      font-size: 0.85em;
+      opacity: 0.8;
+    }
+
     .projects-heading {
-      margin-top: 100px;
+      margin-top: 80px;
       margin-bottom: 20px;
       font-size: 1.5em;
       color: #d6b089;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-    }
-
-    .projects {
-      text-align: center;
     }
 
     .project {
@@ -155,38 +177,54 @@
 
     <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
 
+    <!-- Small album art -->
+    <img src="Final Cover Moving Forward.jpeg" alt="Moving Forward Album Art" class="album-art">
+
     <h1>MOVING FORWARD</h1>
-    <p class="subtitle">FEMALE-FRONTED PROG ROCK FROM COVENTRY, UK</p>
-    <p class="tagline">Music • Merch • Updates</p>
+
+    <p class="tagline">
+      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">STREAM</a> • 
+      <a href="https://vamoosery.bandcamp.com/" target="_blank">BUY</a>
+    </p>
+
+    <p class="subtitle">"VAMOOSERY DEMONSTRATES A KNACK FOR CATCHY, YET COMPLEX SONGWRITING, WITH AN ABILITY TO CREATE SONGS THAT ARE NOT ONLY MUSICALLY INTERESTING BUT ALSO LYRICALLY MEANINGFUL." - Prog Radio</p>
+
+    <p class="subtitle">"A WIDE-RANGING ECLECTIC MIX OF INFLUENCES, FROM THE TRADITIONAL TO THE RADICAL, INFUSED WITH A SPIRIT WHICH DOESN’T WANT TO STAND STILL, BUT NEEDS TO BE, AND IS, RELEVANT" - LAZLAND</p>
+
+    <p class="subtitle">"VAMOOSERY HAVE A VERY FINE DEBUT ALBUM WITH MOVING FORWARD. VARIED, HEAVY, PROGGY, MELODIC, SYMPHONIC. SO MUCH TO ENJOY." - NEW WAVE OF BRITISH HEAVY METAL</p>
+
+    <p class="tagline">
+      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">Music</a> • 
+      <a href="https://vamoosery.bandcamp.com/" target="_blank">Merch</a> • 
+      <a href="https://www.facebook.com/Vamoosery" target="_blank">Updates</a>
+    </p>
 
     <div class="links">
       <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">Spotify</a>
-      <a href="https://vamoosery.bandcamp.com/" target="_blank">BANDCAMP</a>
-      <a href="https://www.facebook.com/Vamoosery" target="_blank">FACEBOOK</a>
-      <a href="https://www.instagram.com/vamoosery/" target="_blank">INSTAGRAM</a>
-      <a href="https://www.youtube.com/@vamoosery/" target="_blank">YOUTUBE</a>
+      <a href="https://vamoosery.bandcamp.com/" target="_blank">Bandcamp</a>
+      <a href="https://www.facebook.com/Vamoosery" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/vamoosery/" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@vamoosery/" target="_blank">YouTube</a>
       <a href="mailto:vamoosery@gmail.com?subject=Vamoosery%20Enquiry">Contact</a>
-<p class="email-text">vamoosery@gmail.com</p>
-
     </div>
+
+    <p class="email-text">vamoosery@gmail.com</p>
 
     <h2 class="projects-heading">ASSOCIATED PROJECTS</h2>
 
-    <div class="projects">
-      <div class="project">
-        <div class="project-title">JOEL JULIAN</div>
-        <div class="project-links">
-          <a href="https://open.spotify.com/artist/0vKVyu27eSxti4FSmlZ9Da?si=vIHFjZTCTzCh9nag1xn4JA" target="_blank">SPOTIFY</a>
-          <a href="https://joeljulian.bandcamp.com/" target="_blank">Bandcamp</a>
-        </div>
+    <div class="project">
+      <div class="project-title">JOEL JULIAN</div>
+      <div class="project-links">
+        <a href="https://open.spotify.com/artist/0vKVyu27eSxti4FSmlZ9Da?si=vIHFjZTCTzCh9nag1xn4JA" target="_blank">Spotify</a>
+        <a href="https://joeljulian.bandcamp.com/" target="_blank">Bandcamp</a>
       </div>
+    </div>
 
-      <div class="project">
-        <div class="project-title">K.A.B</div>
-        <div class="project-links">
-          <a href="https://open.spotify.com/artist/0T0hjDEz0MjZEPpJCFJyGN?si=oboZ5-9uT_-lnwg0tzfp9Q" target="_blank">SPOTIFY</a>
-          <a href="https://kabmusic1.bandcamp.com/" target="_blank">BANDCAMP</a>
-        </div>
+    <div class="project">
+      <div class="project-title">K.A.B</div>
+      <div class="project-links">
+        <a href="https://open.spotify.com/artist/0T0hjDEz0MjZEPpJCFJyGN?si=oboZ5-9uT_-lnwg0tzfp9Q" target="_blank">Spotify</a>
+        <a href="https://kabmusic1.bandcamp.com/" target="_blank">Bandcamp</a>
       </div>
     </div>
 
