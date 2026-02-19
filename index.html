@@ -28,13 +28,14 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
+      /* removed background-attachment: fixed; (improves mobile performance) */
     }
 
     /* Subtle translucent panel */
     .content-wrapper {
-      background: rgba(0, 0, 0, 0.15); /* very subtle */
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
+      background: rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       padding: 50px 40px;
       border-radius: 12px;
       animation: fadeIn 1.2s ease forwards;
@@ -45,22 +46,17 @@
       to { opacity: 1; }
     }
 
-    /* Logo */
     img.logo {
       max-width: 50%;
       height: auto;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
+    /* Make logo larger on mobile */
     @media (max-width: 768px) {
       img.logo {
-        max-width: 80%; /* larger on mobile */
+        max-width: 100%;
       }
-    }
-
-    /* Main Headings */
-    h1, h2, h3, .subtitle, .tagline, .projects-heading, .project-title, .project-links a, .links a, footer {
-      text-transform: uppercase;
     }
 
     h1 {
@@ -71,32 +67,19 @@
 
     .subtitle {
       font-size: 1em;
-      margin-bottom: 20px;
+      margin-top: -5px;
+      margin-bottom: 30px;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
     }
 
-    .stream-buy {
-      font-size: 0.9em;
-      margin-bottom: 30px;
-    }
-
-    .stream-buy a {
-      color: #d6b089;
-      text-decoration: none;
-      margin: 0 0.5em;
-    }
-    .stream-buy a:hover {
-      text-decoration: underline;
-    }
-
+    /* Slightly brighter accent */
     .tagline {
-      font-size: 1.3em;
+      font-size: 1.5em;
       margin-bottom: 2em;
-      color: #dcb78b; /* slightly brighter */
-      text-shadow: 0 0 2px rgba(255,255,255,0.6);
+      color: #d6b089; /* brighter than #c59a73 */
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
 
-    /* Social Links */
     .links a {
       display: inline-block;
       margin: 0.5em;
@@ -116,13 +99,12 @@
       transform: translateY(-2px);
     }
 
-    /* Associated Projects */
     .projects-heading {
-      margin-top: 80px;
+      margin-top: 100px;
       margin-bottom: 20px;
-      font-size: 1.6em;
-      color: #dcb78b;
-      text-shadow: 0 0 2px rgba(255,255,255,0.6);
+      font-size: 1.5em;
+      color: #d6b089;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
     }
 
     .projects {
@@ -130,15 +112,7 @@
     }
 
     .project {
-      margin-bottom: 30px;
-    }
-
-    .project-logo {
-      max-width: 40px;
-      margin-bottom: 5px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      margin-bottom: 20px;
     }
 
     .project-title {
@@ -179,49 +153,35 @@
 
   <div class="content-wrapper">
 
-    <!-- Logo -->
     <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
 
-    <!-- Subheading / Main Heading -->
-    <p class="subtitle">FEMALE-FRONTED PROG ROCK FROM COVENTRY, UK</p>
     <h1>MOVING FORWARD</h1>
-    <p class="stream-buy">
-      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">STREAM THE ALBUM</a> •
-      <a href="https://vamoosery.bandcamp.com/" target="_blank">BUY THE ALBUM</a>
-    </p>
+    <p class="subtitle">FEMALE-FRONTED PROG ROCK FROM COVENTRY, UK</p>
+    <p class="tagline">Music • Merch • Updates</p>
 
-    <!-- Music / Merch / Updates -->
-    <p class="tagline">
-      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">MUSIC</a> •
-      <a href="https://vamoosery.bandcamp.com/" target="_blank">MERCH</a> •
-      <a href="https://www.facebook.com/Vamoosery" target="_blank">UPDATES</a>
-    </p>
-
-    <!-- Social Buttons -->
     <div class="links">
-      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">SPOTIFY</a>
+      <a href="https://open.spotify.com/artist/0xMy7EHlvs3FgcRiBR99DB?si=XfIWRl9jTBWLO-P5IGjhNA" target="_blank">Spotify</a>
       <a href="https://vamoosery.bandcamp.com/" target="_blank">BANDCAMP</a>
       <a href="https://www.facebook.com/Vamoosery" target="_blank">FACEBOOK</a>
       <a href="https://www.instagram.com/vamoosery/" target="_blank">INSTAGRAM</a>
       <a href="https://www.youtube.com/@vamoosery/" target="_blank">YOUTUBE</a>
-      <a href="mailto:vamoosery@gmail.com?subject=Vamoosery%20Enquiry">CONTACT</a>
+      <a href="mailto:vamoosery@gmail.com?subject=Vamoosery%20Enquiry">Contact</a>
+<p class="email-text">vamoosery@gmail.com</p>
+
     </div>
 
-    <!-- Associated Projects -->
     <h2 class="projects-heading">ASSOCIATED PROJECTS</h2>
 
     <div class="projects">
       <div class="project">
-        <img src="Discomfort Logo transparent.png" alt="Joel Julian Logo" class="project-logo">
         <div class="project-title">JOEL JULIAN</div>
         <div class="project-links">
           <a href="https://open.spotify.com/artist/0vKVyu27eSxti4FSmlZ9Da?si=vIHFjZTCTzCh9nag1xn4JA" target="_blank">SPOTIFY</a>
-          <a href="https://joeljulian.bandcamp.com/" target="_blank">BANDCAMP</a>
+          <a href="https://joeljulian.bandcamp.com/" target="_blank">Bandcamp</a>
         </div>
       </div>
 
       <div class="project">
-        <img src="kab_logo.png" alt="K.A.B Logo" class="project-logo">
         <div class="project-title">K.A.B</div>
         <div class="project-links">
           <a href="https://open.spotify.com/artist/0T0hjDEz0MjZEPpJCFJyGN?si=oboZ5-9uT_-lnwg0tzfp9Q" target="_blank">SPOTIFY</a>
