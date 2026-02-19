@@ -27,10 +27,10 @@ body {
 }
 
 .content-wrapper {
-  background: rgba(0, 0, 0, 0.15); /* more subtle */
+  background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
-  padding: 50px 40px;
+  padding: 60px 50px;
   border-radius: 12px;
   animation: fadeIn 1.2s ease forwards;
   opacity: 0;
@@ -46,136 +46,128 @@ body {
 /* Logo */
 img.logo {
   display: block;
-  max-width: 50%;
+  max-width: 55%;
   height: auto;
-  margin: 0 auto 25px auto;
+  margin: 0 auto 35px auto;
 }
 
-/* Album art — forced block layout */
-img.album-art {
-  display: block;
-  width: 160px;
-  height: auto;
-  margin: 0 auto 25px auto;
-  border-radius: 6px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.6);
-}
-
-/* Mobile logo sizing */
 @media (max-width: 768px) {
   img.logo {
-    max-width: 90%;
+    max-width: 95%;
   }
 }
 
-/* MOVING FORWARD title — slightly reduced */
+/* Title */
 h1 {
-  font-size: 2.1em;
+  font-size: 2.5em;
   margin-bottom: 0.6em;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
 }
 
 /* STREAM / BUY */
 .tagline {
-  font-size: 1.4em;
-  margin-bottom: 1.5em;
-  color: #e0c2a0; /* slightly brighter */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  font-size: 1.6em;
+  margin-bottom: 2em;
+  color: #e3c6a6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .tagline a {
-  color: #e0c2a0;
+  color: #e3c6a6;
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 .tagline a:hover {
   text-decoration: underline;
-  color: #f3d4b1;
+  color: #f5d6b5;
 }
 
 /* Review quotes */
 .subtitle {
-  font-size: 0.95em;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-size: 1.05em;
+  margin-bottom: 25px;
+  line-height: 1.6em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
 }
 
-/* Grey source portion */
+/* Source styling */
 .subtitle span {
-  color: #b3b3b3;
-  font-size: 0.9em;
+  display: block;
+  margin-top: 6px;
+  color: #d0d0d0;
+  font-size: 0.95em;
 }
 
 /* Social buttons */
 .links a {
   display: inline-block;
-  margin: 0.5em;
-  padding: 0.8em 1.5em;
+  margin: 0.6em;
+  padding: 0.9em 1.6em;
   text-decoration: none;
   color: #fff;
   background: rgba(0,0,0,0.55);
   border-radius: 6px;
   font-weight: bold;
+  font-size: 1em;
   transition: all 0.25s ease;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
 }
 
 .links a:hover {
   background: rgba(0,0,0,0.75);
-  box-shadow: 0 0 8px rgba(224,194,160,0.5);
+  box-shadow: 0 0 8px rgba(227,198,166,0.6);
   transform: translateY(-2px);
 }
 
 .email-text {
-  margin-top: 10px;
-  font-size: 0.85em;
-  opacity: 0.8;
+  margin-top: 15px;
+  font-size: 0.95em;
+  opacity: 0.85;
 }
 
-/* Associated Projects heading */
+/* Associated Projects */
 .projects-heading {
-  margin-top: 80px;
-  margin-bottom: 20px;
-  font-size: 1.6em;
-  color: #e0c2a0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  margin-top: 90px;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  color: #e3c6a6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
-/* Projects */
 .project {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .project-title {
-  font-size: 1.4em;
-  margin-bottom: 5px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  font-size: 1.6em;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
 }
 
 .project-links a {
   display: inline-block;
-  margin: 0.3em;
-  padding: 0.5em 1em;
+  margin: 0.4em;
+  padding: 0.6em 1.2em;
   text-decoration: none;
   color: #fff;
   background: rgba(0,0,0,0.6);
   border-radius: 5px;
-  font-size: 0.9em;
+  font-size: 1em;
   transition: all 0.25s ease;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
 }
 
 .project-links a:hover {
   background: rgba(0,0,0,0.8);
-  box-shadow: 0 0 6px rgba(224,194,160,0.5);
+  box-shadow: 0 0 6px rgba(227,198,166,0.6);
   transform: translateY(-2px);
 }
 
 footer {
-  margin-top: 40px;
-  font-size: 0.9em;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  margin-top: 50px;
+  font-size: 1em;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
 }
 </style>
 </head>
@@ -186,8 +178,6 @@ footer {
 
 <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
 
-<img src="Final Cover Moving Forward.jpeg" alt="Moving Forward Album Art" class="album-art">
-
 <h1>MOVING FORWARD</h1>
 
 <p class="tagline">
@@ -196,17 +186,17 @@ footer {
 </p>
 
 <p class="subtitle">
-"VAMOOSERY DEMONSTRATES A KNACK FOR CATCHY, YET COMPLEX SONGWRITING..." 
+"VAMOOSERY DEMONSTRATES A KNACK FOR CATCHY, YET COMPLEX SONGWRITING, WITH AN ABILITY TO CREATE SONGS THAT ARE NOT ONLY MUSICALLY INTERESTING BUT ALSO LYRICALLY MEANINGFUL."
 <span>- Prog Radio</span>
 </p>
 
 <p class="subtitle">
-"A WIDE-RANGING ECLECTIC MIX OF INFLUENCES..." 
+"A WIDE-RANGING ECLECTIC MIX OF INFLUENCES, FROM THE TRADITIONAL TO THE RADICAL, INFUSED WITH A SPIRIT WHICH DOESN’T WANT TO STAND STILL, BUT NEEDS TO BE, AND IS, RELEVANT"
 <span>- LAZLAND</span>
 </p>
 
 <p class="subtitle">
-"VARIED, HEAVY, PROGGY, MELODIC, SYMPHONIC..." 
+"VAMOOSERY HAVE A VERY FINE DEBUT ALBUM WITH MOVING FORWARD. VARIED, HEAVY, PROGGY, MELODIC, SYMPHONIC. SO MUCH TO ENJOY."
 <span>- NEW WAVE OF BRITISH HEAVY METAL</span>
 </p>
 
