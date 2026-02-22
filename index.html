@@ -27,6 +27,7 @@ body {
 }
 
 .content-wrapper {
+  position: relative; /* ADDED */
   background: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -41,6 +42,40 @@ body {
 
 @keyframes fadeIn {
   to { opacity: 1; }
+}
+
+/* Corner Quotes */
+.corner-quote {
+  position: absolute;
+  top: 25px;
+  width: 260px;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  text-align: left;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+}
+
+.corner-quote span {
+  display: block;
+  margin-top: 6px;
+  color: #e3cdb6;
+  font-size: 0.85em;
+}
+
+.corner-left {
+  left: 30px;
+}
+
+.corner-right {
+  right: 30px;
+  text-align: right;
+}
+
+/* Hide corner quotes on mobile */
+@media (max-width: 900px) {
+  .corner-quote {
+    display: none;
+  }
 }
 
 /* Logo */
@@ -83,7 +118,7 @@ h1 {
   color: #f5d6b5;
 }
 
-/* Review quotes */
+/* Review quotes (center one) */
 .subtitle {
   font-size: 1.05em;
   margin-bottom: 25px;
@@ -95,7 +130,7 @@ h1 {
 .subtitle span {
   display: block;
   margin-top: 6px;
-  color: ##e3cdb6;
+  color: #e3cdb6; /* FIXED TYPO */
   font-size: 0.95em;
 }
 
@@ -176,11 +211,23 @@ footer {
 
 <div class="content-wrapper">
 
+<!-- NEW TOP LEFT QUOTE -->
+<div class="corner-quote corner-left">
+"MOVING FORWARD CONTINUOUSLY ENGAGES... A RANGE OF HOOKY, INSPIRATIONAL TRACKS THAT SPAN FROM CONTEMPLATIVE FOLK TO ARDENT ROCK THEATRICS."
+<span>- MIKE MINEO — OBSCURE SOUND</span>
+</div>
+
+<!-- NEW TOP RIGHT QUOTE -->
+<div class="corner-quote corner-right">
+"YOU WOULD NEED TO BE AN AUTOMATON NOT TO BE BOUNCING UP AND DOWN AT THE END OF THIS... VAMOOSERY WILL, I HOPE, TAKE THEIR PLACE IN THE VANGUARD OF THE NEW GENERATION."
+<span>- STEVE LAZENBY — LAZLAND</span>
+</div>
+
 <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
 
 <h1>MOVING FORWARD</h1>
 
-  <p class="tagline">
+<p class="tagline">
 YOU CAN SUPPORT US BY:
 </p>
   
@@ -191,7 +238,7 @@ YOU CAN SUPPORT US BY:
 
 <p class="subtitle">
 "VAMOOSERY DEMONSTRATES A KNACK FOR CATCHY, YET COMPLEX SONGWRITING... NOT ONLY MUSICALLY INTERESTING BUT ALSO LYRICALLY MEANINGFUL."
-<span>- Prog Radio</span>
+<span>- KEVIN CARMONY — Prog Radio</span>
 </p>
 
 <p class="tagline">
