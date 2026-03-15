@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vamoosery – Moving Forward</title>
+
+<!-- =============================================
+     META PIXEL CODE
+     Replace YOUR_PIXEL_ID with your actual Pixel ID
+     ============================================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '903715597214406');
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=903715597214406&ev=PageView&noscript=1"/>
+</noscript>
+<!-- END META PIXEL CODE -->
+
+<style>
+@font-face {
+  font-family: 'diamondsregular';
+  src: url('diamondsregular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'diamondsregular', Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background-image: url('Album Front Cover (1).webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-wrapper {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 50px 40px 45px;
+  border-radius: 12px;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Logo */
+img.logo {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto 28px auto;
+}
+
+/* Album title */
+h1 {
+  font-family: 'diamondsregular', Arial, sans-serif;
+  font-size: 2.2em;
+  margin: 0 0 0.5em 0;
+  color: #fff;
+}
+
+/* Review quote */
+.review {
+  font-family: 'diamondsregular', Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  margin: 0 0 2em 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
+  opacity: 0.9;
+}
+
+.review-source {
+  display: block;
+  margin-top: 6px;
+  color: #e3cdb6;
+  font-size: 0.85em;
+}
+
+/* Primary CTA buttons */
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 auto;
+  max-width: 340px;
+}
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  padding: 1em 1.4em;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 7px;
+  font-family: 'diamondsregular', Arial, sans-serif;
+  font-size: 1.15em;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.cta-stream {
+  background: rgba(30, 215, 96, 0.22);
+  border: 1px solid rgba(30, 215, 96, 0.5);
+}
+
+.cta-stream:hover {
+  background: rgba(30, 215, 96, 0.35);
+  border-color: rgba(30, 215, 96, 0.8);
+}
+
+.cta-buy {
+  background: rgba(0, 150, 255, 0.18);
+  border: 1px solid rgba(0, 150, 255, 0.45);
+}
+
+.cta-buy:hover {
+  background: rgba(0, 150, 255, 0.32);
+  border-color: rgba(0, 150, 255, 0.75);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 36px 24px 36px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  img.logo {
+    max-width: 92%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="content-wrapper">
+
+  <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
+
+  <h1>MOVING FORWARD</h1>
+
+  <p class="review">
+    "VAMOOSERY DEMONSTRATES A KNACK FOR CATCHY, YET COMPLEX SONGWRITING…
+    NOT ONLY MUSICALLY INTERESTING BUT ALSO LYRICALLY MEANINGFUL."
+    <span class="review-source">— KEVIN CARMONY, PROG RADIO</span>
+  </p>
+
+  <div class="cta-group">
+    <a class="cta-btn cta-stream"
+       href="https://open.spotify.com/album/1ldRvkj0TwNQAn2hzw2YQK"
+       target="_blank"
+       onclick="fbq('track', 'ViewContent', {content_name: 'Spotify Click'})">
+      ▶ LISTEN NOW ON SPOTIFY
+    </a>
+    <a class="cta-btn cta-buy"
+       href="https://vamoosery.bandcamp.com/album/moving-forward"
+       target="_blank"
+       onclick="fbq('track', 'Purchase', {content_name: 'Bandcamp Click'})">
+      ☆ BUY / DOWNLOAD ON BANDCAMP
+    </a>
+  </div>
+
+</div>
+
+</body>
+</html>
