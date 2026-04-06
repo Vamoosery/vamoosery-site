@@ -132,7 +132,6 @@ h2 {
   color: #fff;
   border-radius: 7px;
   font-family: 'diamondsregular', Arial, sans-serif;
-  font-size: 1.15em;
   font-weight: bold;
   letter-spacing: 0.04em;
   transition: all 0.25s ease;
@@ -145,23 +144,28 @@ h2 {
 }
 
 .cta-stream {
-  background: rgba(30, 215, 96, 0.45);
-  border: 1px solid rgba(30, 215, 96, 0.85);
+  font-size: 1.35em;
+  padding: 1.15em 1.4em;
+  background: rgba(30, 215, 96, 0.55);
+  border: 2px solid rgba(30, 215, 96, 0.95);
 }
 
 .cta-stream:hover {
-  background: rgba(30, 215, 96, 0.35);
-  border-color: rgba(30, 215, 96, 0.8);
+  background: rgba(30, 215, 96, 0.45);
+  border-color: rgba(30, 215, 96, 0.9);
 }
 
 .cta-buy {
-  background: rgba(0, 150, 255, 0.4);
-  border: 1px solid rgba(0, 150, 255, 0.85);
+  font-size: 0.95em;
+  background: rgba(0, 150, 255, 0.3);
+  border: 1px solid rgba(0, 150, 255, 0.65);
+  opacity: 0.85;
 }
 
 .cta-buy:hover {
-  background: rgba(0, 150, 255, 0.32);
+  background: rgba(0, 150, 255, 0.38);
   border-color: rgba(0, 150, 255, 0.75);
+  opacity: 1;
 }
 
 /* Responsive */
@@ -195,13 +199,13 @@ h2 {
        href="https://open.spotify.com/album/1ldRvkj0TwNQAn2hzw2YQK?highlight=spotify:track:4FfztGhVuinG1JWfqfoLHA"
        target="_blank"
        onclick="fbq('track', 'ViewContent', {content_name: 'Spotify Click'})">
-      ▶ LISTEN TO THE SONG ON SPOTIFY
+      ▶ LISTEN ON SPOTIFY
     </a>
     <a class="cta-btn cta-buy"
-       href="https://vamoosery.bandcamp.com/album/moving-forward"
+       href="https://vamoosery.bandcamp.com/track/archaeologist-2"
        target="_blank"
        onclick="fbq('track', 'Purchase', {content_name: 'Bandcamp Click'})">
-      ☆ SUPPORT DIRECTLY THROUGH BANDCAMP
+      ☆ DOWNLOAD ON BANDCAMP
     </a>
   </div>
 
