@@ -28,6 +28,26 @@ fbq('track', 'PageView');
 <!-- END META PIXEL CODE -->
 
 <style>
+.dust-overlay {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none; /* Crucial so people can still click the Spotify button */
+  z-index: 10;
+  opacity: 0.04; 
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch""")/>></filter><rect width="100%" height="100%" filter="url(%23n)""")/>></svg>');
+  animation: dust-drift 8s steps(10) infinite;
+}
+
+@keyframes dust-drift {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-5%,-5%); }
+  100% { transform: translate(0,0); }
+}
+
+     
 @font-face {
   font-family: 'diamondsregular';
   src: url('diamondsregular.woff2') format('woff2');
