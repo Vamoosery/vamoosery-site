@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vamoosery – Moving Forward</title>
+
+<!-- =============================================
+     META PIXEL CODE
+     Replace YOUR_PIXEL_ID with your actual Pixel ID
+     ============================================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '903715597214406');
+fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=903715597214406&ev=PageView&noscript=1"/>
+</noscript>
+<!-- END META PIXEL CODE -->
+
+<style>
+@font-face {
+  font-family: 'diamondsregular';
+  src: url('diamondsregular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'diamondsregular', Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  background-image: url('YAAN landing page gradient.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.content-wrapper {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 50px 40px 45px;
+  border-radius: 12px;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Logo */
+img.logo {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto 14px auto;
+}
+
+/* Album title */
+h1 {
+  font-family: 'diamondsregular', Arial, sans-serif;
+  font-size: 2.2em;
+  margin: 0 0 0em 0;
+  color: #fff;
+}
+
+     /* SUB HEADING */
+h2 {
+ font-family: 'diamondsregular', Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6em;
+ margin: 0 0 1.4em 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
+  opacity: 0.9;
+}
+
+/* Review quote */
+.review {
+  font-family: 'diamondsregular', Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6em;
+  margin: 2em 0 0 0;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
+  opacity: 0.9;
+}
+
+.review-source {
+  display: block;
+  margin-top: 6px;
+  color: #e3cdb6;
+  font-size: 0.85em;
+}
+
+/* Primary CTA button */
+.cta-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0 auto;
+  max-width: 340px;
+}
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  padding: 1.15em 1.4em;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 7px;
+  font-family: 'diamondsregular', Arial, sans-serif;
+  font-size: 1.35em;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+.cta-stream {
+  background: rgba(30, 215, 96, 0.55);
+  border: 2px solid rgba(30, 215, 96, 0.95);
+}
+
+.cta-stream:hover {
+  background: rgba(30, 215, 96, 0.45);
+  border-color: rgba(30, 215, 96, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 36px 24px 36px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  img.logo {
+    max-width: 92%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="content-wrapper">
+
+  <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
+
+  <h1>you are always near</h1>
+      <h2>DO ÁLBUM 'MOVING FORWARD'</h2>
+
+  <div class="cta-group">
+    <a class="cta-btn cta-stream"
+       href="https://open.spotify.com/album/3g8hk0uIBO5DRl7Te2xcdQ?highlight=spotify:track:5s6ncgEQnbm6VktuvesYX0"
+       target="_blank"
+       onclick="fbq('track', 'ViewContent', {content_name: 'Spotify Click'})">
+      ▶ OUÇA NO SPOTIFY
+    </a>
+  </div>
+
+       <p class="review">
+    "ONE OF THE BEST TRACKS ON THE ALBUM... FANTASTIC VOCALS."
+    <span class="review-source">— MICHAEL WEAVER, JESUSFREAKHIDEOUT.COM</span>
+  </p>
+
+</div>
+
+</body>
+</html>
