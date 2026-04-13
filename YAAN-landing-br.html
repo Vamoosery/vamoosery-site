@@ -63,7 +63,7 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 10;
-  opacity: 0.055;
+  opacity: 0.18;
 }
 
 .content-wrapper {
@@ -235,7 +235,7 @@ h2 {
       data[i]     = v;   // R
       data[i + 1] = v;   // G
       data[i + 2] = v;   // B
-      data[i + 3] = (Math.random() * 28) | 0; // A — keep it very subtle
+      data[i + 3] = (Math.random() * 80) | 0; // A — visible grain density
     }
     ctx.putImageData(img, 0, 0);
     setTimeout(function () {
