@@ -7,7 +7,6 @@
 
 <!-- =============================================
      META PIXEL CODE
-     Replace YOUR_PIXEL_ID with your actual Pixel ID
      ============================================= -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -28,26 +27,6 @@ fbq('track', 'PageView');
 <!-- END META PIXEL CODE -->
 
 <style>
-.dust-overlay {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  pointer-events: none; /* Crucial so people can still click the Spotify button */
-  z-index: 10;
-  opacity: 0.04; 
-  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch""")/>></filter><rect width="100%" height="100%" filter="url(%23n)""")/>></svg>');
-  animation: dust-drift 8s steps(10) infinite;
-}
-
-@keyframes dust-drift {
-  0% { transform: translate(0,0); }
-  50% { transform: translate(-5%,-5%); }
-  100% { transform: translate(0,0); }
-}
-
-     
 @font-face {
   font-family: 'diamondsregular';
   src: url('diamondsregular.woff2') format('woff2');
@@ -75,7 +54,21 @@ body {
   background-position: center center;
 }
 
+/* Dust canvas — sits over everything, never blocks clicks */
+#dust {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.055;
+}
+
 .content-wrapper {
+  position: relative;
+  z-index: 20; /* sits above the dust layer */
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -108,12 +101,12 @@ h1 {
   color: #fff;
 }
 
-     /* SUB HEADING */
+/* SUB HEADING */
 h2 {
- font-family: 'diamondsregular', Arial, sans-serif;
+  font-family: 'diamondsregular', Arial, sans-serif;
   font-size: 0.95em;
   line-height: 1.6em;
- margin: 0 0 1.4em 0;
+  margin: 0 0 1.4em 0;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.85);
   opacity: 0.9;
 }
@@ -193,12 +186,15 @@ h2 {
 
 <body>
 
+<!-- Dust/grain canvas -->
+<canvas id="dust"></canvas>
+
 <div class="content-wrapper">
 
   <img src="Vamoosery-Logo-2021-White.png" alt="Vamoosery Logo" class="logo">
 
   <h1>YOU Are Always Near</h1>
-      <h2>DO ÁLBUM 'MOVING FORWARD'</h2>
+  <h2>DO ÁLBUM 'MOVING FORWARD'</h2>
 
   <div class="cta-group">
     <a class="cta-btn cta-stream"
@@ -209,12 +205,47 @@ h2 {
     </a>
   </div>
 
-       <p class="review">
+  <p class="review">
     "ONE OF THE BEST TRACKS ON THE ALBUM... FANTASTIC VOCALS."
     <span class="review-source">— MICHAEL WEAVER, JESUSFREAKHIDEOUT.COM</span>
   </p>
 
 </div>
+
+<!-- Grain animation: pure canvas, no external assets, ~10fps for cinematic feel -->
+<script>
+(function () {
+  var canvas = document.getElementById('dust');
+  var ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function drawGrain() {
+    var w = canvas.width;
+    var h = canvas.height;
+    var img = ctx.createImageData(w, h);
+    var data = img.data;
+    for (var i = 0; i < data.length; i += 4) {
+      var v = (Math.random() * 255) | 0;
+      data[i]     = v;   // R
+      data[i + 1] = v;   // G
+      data[i + 2] = v;   // B
+      data[i + 3] = (Math.random() * 28) | 0; // A — keep it very subtle
+    }
+    ctx.putImageData(img, 0, 0);
+    setTimeout(function () {
+      requestAnimationFrame(drawGrain);
+    }, 100); // ~10fps — enough movement without being distracting
+  }
+
+  drawGrain();
+})();
+</script>
 
 </body>
 </html>
